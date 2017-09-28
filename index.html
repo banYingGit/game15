@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <title>风险决策</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-2.1.3.js"></script>
+</head>
+<body>
+
+<div class="screen" id="screen1">
+    <div class="logo img-box"><img src="img/logo.png"/></div>
+    <div class="box-bg">
+        <div class="box-text-2">
+            <p class="font-big">检测内容:风险偏好</p>
+            <p>完成本测验需要约7分钟</p>
+            <p>请您根据题目要求认真作答</p>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" id="goScreen2">进入测验</p>
+    </div>
+</div>
+<div class="screen" id="screen2">
+    <div class="box-bg box-bg-big box-bg-top">
+        <div class="box-text-2">
+            <p class="font-small">接下来会出现一些假定的情景，您需要立刻做出判断。</p>
+            <p class="font-small"> 这些情景虚拟的，您的选择不会影响现实生活。</p>
+            <p class="p-t-10">假设您将<span>得到</span>一些钱，具体钱数根据您的选择来定</p>
+            <p>您可以在<span>确定选项</span>(确定得到其中一部分)和<span>博弈选项</span></p>
+            <p>(有一定的概率得到全部的钱)中做出选择。</p>
+            <p class="font-small p-t-10">先来做几道练习题</p>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" id="goPractice">开始练习</p>
+    </div>
+</div>
+<div class="screen" id="">
+    <div class="box-bg box-bg-big box-bg-top">
+        <div class="box-text-2">
+            <p class="font-big">回答得很好！下面开始正式测验</p>
+            <p class="p-t-10">假设您将<span>得到</span>一些钱，具体钱数根据您的选择来定</p>
+            <p>您可以在<span>确定选项</span>(确定得到其中一部分)和<span>博弈选项</span></p>
+            <p>(有一定的概率得到全部的钱)中做出选择。</p>
+
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button">开始答题</p>
+    </div>
+</div>
+
+
+<div class="screen " style="display: block">
+
+    <div class="time-box" id="timeBox">
+        <p><span id="time">30</span>秒</p>
+    </div>
+    <div class="part-text font-small">假设您将可能<span>得到</span><i>25</i>元，您可以选择</div>
+
+    <div class="part-left font-small">保留45元</div>
+    <!--可选样式 p2  p4  p6  p8-->
+    <div class="part-right p8"><p class="left">60%可能得到0元</p>
+        <p class="right">40%可能得到25元</p>
+    </div>
+    <div class="part-button">
+            <p class="button">确定选项</p>
+            <p class="button">博弈选项</p>
+    </div>
+    <div class="part-note part-note-b">请您尽快做出选择</div>
+
+    <div class="part-note part-note-l">
+        该选项表明您确定能少损失其中6元
+    </div>
+    <div class="part-note part-note-r">该选项表明有60%可能不损失，40%可能损失10元</div>
+</div>
+<div class="screen" id="over">
+    <div class="box-bg box-bg-top over">
+        <div class="box-text-2">
+            <p class="font-big">您回答得很好！</p>
+            <p class="font-small">点击进入下一个测验</p>
+        </div>
+    </div>
+    <div class="button-box">
+        <p class="button" data-role="out">下一页</p>
+    </div>
+</div>
+<script>
+    var screenH = $(document).height()
+
+    $('.box-bg').css({'font-size': screenH / 25})
+    $('.font-small').css({'font-size': screenH / 28})
+    $('.font-big').css({'font-size': screenH / 22})
+    $('.button').css({'font-size': screenH / 28})
+    $('.time-box').css({'width': screenH * 0.12})
+    $('.time-box p').css({
+        'width': screenH * 0.12,
+        'height': screenH * 0.12 + 'px',
+        'line-height': screenH * 0.12 + 'px',
+        'font-size': screenH / 34
+    })
+    $('.time-box p span').css({'font-size': screenH / 20})
+    $('.part-note').css({'font-size': screenH / 30})
+    $('.part-right').css({
+        'width': screenH * 0.42,
+        'height': screenH * 0.42 + 'px'
+    })
+    $('.part-right p').css({'font-size': screenH / 30})
+</script>
+<script src="javascript/gameView.js"></script>
+</body>
+</html>
