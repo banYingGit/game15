@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    color: #547cec;
+    color: #8c4c2e;
     font-style: normal;
 }
 
@@ -12,10 +12,6 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #90c6f8;
-    background: -moz-linear-gradient(top, #6aa5fd, #c3f3f0);
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6aa5fd), to(#c3f3f0));
-    background: -o-linear-gradient(top, #6aa5fd, #c3f3f0);
 }
 
 .p-t-10 {
@@ -39,72 +35,89 @@ img {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: url("../img/background.png") center no-repeat;
+    background-size: 100% 100%;
 
 }
 
-.logo {
-    width: 40%;
-    margin: 10% auto 5% auto
+.screen1 {
+    background: url("../img/index.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.screen2 {
+    background: url("../img/explain.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.screen3 {
+    background: url("../img/background2.png") center no-repeat;
+    background-size: 100% 100%;
 }
 
 /* 文字说明背景 */
 .box-bg {
-    width: 55%;
-    padding: 3% 4%;
-    margin: 0 auto 5% auto;
+    width: 60%;
+    padding: 5% 4%;
+    margin: 20% auto 0 auto;
     background: rgba(255, 255, 255, .9);
     border-radius: 20px;
-    line-height: 180%;
-    letter-spacing: 3px;
-}
-
-.font-big {
     line-height: 200%;
-}
-
-.font-small {
-    line-height: 160%;
-}
-
-.box-bg-big {
-    width: 70%;
-}
-
-.box-bg-top {
-    margin-top: 10%
-}
-
-/* 文字说明样式2  文字剧中显示 */
-.box-text-2 {
-    padding: 2% 0;
+    letter-spacing: 3px;
     text-align: center;
-    font-weight: 500;
+
 }
 
-.box-text-2 span {
-    color: #f6981d;
+.box-bg > p {
+    font-weight: bold;
+}
+
+.box-bg-button {
+    width: 100%;
+    height: 20%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.box-bg-button span {
+    display: inline-block;
+    background: #ff6535;
+    border: solid 2px #ff6535;
+    color: #fff;
+    padding: 0 50px;
+    margin: 0 10px;
+    letter-spacing: 15px;
+    text-indent: 20px;
+    border-radius: 15px;
+    line-height: 200%;
+    font-weight: 600;
 }
 
 /* 按钮样式 */
 .button-box {
     width: 100%;
-    height: 9%;
+    height: 10%;
     text-align: center;
+}
+
+.buttom-fixed {
+    position: fixed;
+    bottom: 5%;
+    left: 0;
 }
 
 .button {
     display: inline-block;
     height: 100%;
-    background: #547cec;
-    border: solid 2px #547cec;
+    background: #ff6535;
+    border: solid 2px #ff6535;
     color: #fff;
-    padding: 0 40px;
-    text-shadow: 2px 2px 2px #999;
-    letter-spacing: 20px;
+    padding: 0 50px;
+    letter-spacing: 15px;
     text-indent: 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 10px -3px #547cec;
     line-height: 250%;
+    font-weight: 600;
 }
 
 .button-box-s .button {
@@ -130,160 +143,51 @@ img {
     color: #fff;
 }
 
-/** 游戏界面 **/
-.part-text {
+
+/*进度条*/
+.process {
     position: absolute;
-    width: 100%;
-    line-height: 250%;
-    top: 7%;
+    bottom: 15.5%;
+    left: 15%;
+    width: 70%;
+    background: #924a23;
+    border-radius: 33px;
+}
+
+.process:after {
+    position: absolute;
+    display: block;
+    top: 0;
     left: 0;
-    text-align: center;
-    color: #2848a1;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 33px;
+    box-shadow: 0 5px 3px 3px #bd8750;
+    content: '';
 }
 
-.part-text span {
-    color: #2848a1;
-}
-
-.part-text i {
-    color: #ffec6c;
-    font-weight: bold;
-    padding: 0 10px;
-}
-
-.part-note {
+.process-bar {
     position: absolute;
-    padding: 15px 0;
-    color: #2848a1;
-    line-height: 150%;
-    background: rgba(255, 255, 255, .7);
-    border-radius: 10px;
-}
-
-.part-note-b {
-    width: 26%;
-    left: 37%;
-    bottom: 5%;
-    text-align: center;
-}
-
-.part-note-l {
-    width: 25%;
-    left: 8%;
-    top: 25%;
-    padding: 15px 30px;
-}
-
-.part-note-r {
-    width: 30%;
-    right: 8%;
-    top: 23%;
-    padding: 15px 30px;
-}
-
-.part-left {
-    position: absolute;
-    width: 20%;
-    height: 15%;
-    top: 35%;
-    left: 18%;
-    color: #2848a1;
-    background: #ffa443;
-    border-radius: 30px;
-    line-height: 400%;
-    text-align: center;
-}
-
-.part-right {
-    position: absolute;
-    top: 30%;
-    right: 18%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.part-right p {
-    position: absolute;
-    width: 40%;
-    line-height: 120%;
-    text-align: center;
-}
-
-.p2 {
-    background-image: url("../img/sources/20.png");
-}
-
-.p2 .left {
-    top: 20%;
-    left: 5%;
-}
-
-.p2 .right {
-    top: 55%;
-    right: 15%;
-}
-
-.p4 {
-    background-image: url("../img/sources/40.png");
-}
-
-.p4 .left {
-    top: 30%;
-    left: 5%;
-}
-
-.p4 .right {
-    top: 55%;
-    right: 15%;
-}
-
-.p6 {
-    background-image: url("../img/sources/60.png");
-}
-
-.p6 .left {
-    top: 40%;
-    left: 5%;
-}
-
-.p6 .right {
-    top: 35%;
-    right: 5%;
-}
-
-.p8 {
-    background-image: url("../img/sources/80.png");
-}
-
-.p8 .left {
-    top: 55%;
-    left: 10%;
-}
-
-.p8 .right {
-    top: 16%;
-    right: 10%;
-}
-
-.part-button {
-    position: absolute;
-    bottom: 18%;
-    width: 60%;
-    left: 18%;
-}
-
-.part-button .button {
-    line-height: 200%;
-}
-
-.part-button .button:nth-child(1) {
     display: block;
-    float: left;
-
+    bottom: 13%;
+    left: .5%;
+    z-index: 2;
+    height: 74%;
+    overflow: hidden;
+    border-radius: 33px;
+    background: #fec35c;
 }
 
-.part-button .button:nth-child(2) {
-    display: block;
-    float: right;
+.process-bar:after {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #924a23;
+    content: '';
 }
+/** 游戏界面 **/

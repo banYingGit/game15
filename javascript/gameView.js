@@ -70,6 +70,35 @@ function _event() {
 
 
 }
+_setProcess()
+// 进度条
+function _setProcess() {
+
+    var auotPro, i = 0;
+
+    var timeFn = function () {
+
+        i = i + 1
+
+        $('#process').css('width', i + '%')
+
+        if (i == 99) {
+
+            clearInterval(auotPro)
+
+            setTimeout(function () {
+
+
+            }, 8000)
+
+
+        }
+
+    }
+
+    auotPro = setInterval(timeFn, 100);
+
+}
 
 
 // 点击按钮事件处理
